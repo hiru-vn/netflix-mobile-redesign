@@ -13,6 +13,7 @@ import Carousel from "react-native-snap-carousel";
 import { MyList, Movies, Popular, Friends } from "../data";
 import { LinearGradient } from "expo-linear-gradient";
 import ListMain from "../components/ListMain";
+import Header from "../components/Header";
 
 const { width: winWidth, height: winHeight } = Dimensions.get("window");
 const listButton = [
@@ -29,8 +30,10 @@ export default class Home extends Component {
         };
         this._carousel = {};
     }
+    static navigationOptions = {
+        header: <Header/>,
+      };
     handleSnapToItem = index => {
-        console.log("snapped to ", index);
         //go to
     };
     _renderItem = ({ item, index }) => {
@@ -46,9 +49,12 @@ export default class Home extends Component {
             </View>
         );
     };
+    navSection = (item) => {
+        if (item.id == 1) this.props.navigation.navigate('History', { 'item': item })
+    }
     _renderButton = item => {
         return (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.navSection(item.item)}>
                 <LinearGradient
                     colors={["#d45253", "#9e1f28"]}
                     style={styles.buttonMain}

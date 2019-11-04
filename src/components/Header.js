@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import {EvilIcons,Feather} from '@expo/vector-icons'
+import { EvilIcons, Feather } from '@expo/vector-icons'
 import { Header as Head } from 'react-navigation-stack';
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      shouldGoBack: props.shouldGoBack?true:false,
     };
+  }
+
+  menu = () => {
+    
   }
 
   render() {
     return (
       <View style={styles.headerContainer}>
-        <TouchableOpacity>
-          <EvilIcons size={30} color='rgb(134,134,134)' name='search'/>
+        <TouchableOpacity onPress={this.state.shouldGoBack? () => this.props.goBack() : ()=>this.menu()}>
+          <Feather size={29} color='rgb(134,134,134)' name={this.state.shouldGoBack?'arrow-left':'menu'} />
         </TouchableOpacity>
-        <Image source={require('../assets/logo.png')} style={styles.logoImg}/>
+        <Image source={require('../assets/logo.png')} style={styles.logoImg} />
         <TouchableOpacity>
-          <Feather size={24} color='rgb(134,134,134)' name='menu'/>
+          <EvilIcons size={35} color='rgb(134,134,134)' name='search'/>
         </TouchableOpacity>
       </View>
     );
@@ -37,8 +41,9 @@ const styles = StyleSheet.create({
     marginTop: Head.HEIGHT,
   },
   logoImg: {
-    width: 110,
-    height: 34,
+    width: 120,
+    height: 42,
     resizeMode: 'cover',
+    alignSelf:'center',
   },
 })

@@ -16,7 +16,7 @@ export default class Movie extends Component {
   }
   render() {
     return (
-      <ScrollView style={{ height: '100%' }}>
+      <ScrollView style={{ height: winHeight+Head.HEIGHT }}>
         <View style={styles.container}>
           <View style={styles.Header}>
             <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
@@ -79,18 +79,18 @@ const styles = StyleSheet.create({
     height: winHeight+Head.HEIGHT,
   },
   top: {
-    flex: 1,
+    flex: winHeight/2,
     width: winWidth,
     alignItems: "center",
     justifyContent: 'flex-end',
   },
   bottom: {
-    flex: 1,
+    flex: winHeight/2,
     width: winWidth,
     alignItems: 'center',
   },
   imgContainer: {
-    height: '61%',
+    height: winHeight/100*62,
     width: '150%',
     position: 'absolute',
     resizeMode: 'cover',
@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     paddingHorizontal: 20,
+    marginBottom: 20,
   },
   title: {
     fontSize: 18,

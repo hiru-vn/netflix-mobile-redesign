@@ -62,6 +62,10 @@ export const customStyles = StyleSheet.create({
   fullWidth: {
     width: '100%',
   },
+  fullSize: {
+    width: '100%',
+    height: '100%',
+  },
   black: {
     color: '#000',
   },

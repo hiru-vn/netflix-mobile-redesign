@@ -5,13 +5,11 @@ import Home from '../screens/Home';
 import Movie from '../screens/Movie';
 import BaseScreen from '../screens/BaseScreen';
 import Header from '../components/Header';
+import History from '../screens/History';
 
 const RootStack = createStackNavigator({
     Home: {
         screen: Home,
-        navigationOptions: {
-          header: <Header/>,
-        },
     },
     Movie: {
         screen: Movie,
@@ -19,6 +17,9 @@ const RootStack = createStackNavigator({
           header: null
         },
     },
+    History: {
+        screen: History,
+    }
 },
     {
         initialRouteName: 'Home',
