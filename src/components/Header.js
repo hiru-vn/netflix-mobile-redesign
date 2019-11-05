@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity ,Platform} from 'react-native';
 import { EvilIcons, Feather } from '@expo/vector-icons'
-import { Header as Head } from 'react-navigation-stack';
+import APPBAR_HEIGHT from '../constant/APPBAR_HEIGHT';
 
 export default class Header extends Component {
   constructor(props) {
@@ -32,13 +32,13 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    width: '88%',
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: 30,
+    paddingHorizontal: 30,
     marginBottom: 0,
-    marginTop: Head.HEIGHT,
+    marginTop: APPBAR_HEIGHT,
   },
   logoImg: {
     width: 120,

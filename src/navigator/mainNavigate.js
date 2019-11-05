@@ -6,6 +6,7 @@ import Movie from '../screens/Movie';
 import BaseScreen from '../screens/BaseScreen';
 import Header from '../components/Header';
 import History from '../screens/History';
+import Share from '../screens/Share';
 
 const RootStack = createStackNavigator({
     Home: {
@@ -19,7 +20,10 @@ const RootStack = createStackNavigator({
     },
     History: {
         screen: History,
-    }
+    },
+    Share: {
+        screen: Share,
+    },
 },
     {
         initialRouteName: 'Home',

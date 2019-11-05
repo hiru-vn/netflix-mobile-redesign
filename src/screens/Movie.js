@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions, ScrollView
 import { Entypo, AntDesign } from '@expo/vector-icons'
 import { customStyles } from '../styles';
 import ListSecondary from '../components/ListSecondary';
-import { Header as Head } from 'react-navigation-stack';
+import APPBAR_HEIGHT from '../constant/APPBAR_HEIGHT';
 
 const { width: winWidth, height: winHeight } = Dimensions.get("window");
 export default class Movie extends Component {
@@ -16,7 +16,7 @@ export default class Movie extends Component {
   }
   render() {
     return (
-      <ScrollView style={{ height: winHeight+Head.HEIGHT }}>
+      <ScrollView style={{ height: winHeight+APPBAR_HEIGHT }}>
         <View style={styles.container}>
           <View style={styles.Header}>
             <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
@@ -31,11 +31,15 @@ export default class Movie extends Component {
           </View>
           <View style={styles.top}>
             <View style={styles.topBottom}>
-              <TouchableOpacity><Entypo size={27} name='plus' color='rgb(117,117,117)' /></TouchableOpacity>
+              <TouchableOpacity>
+                <Entypo size={27} name='plus' color='rgb(117,117,117)' />
+              </TouchableOpacity>
               <TouchableOpacity style={styles.playButton}>
                 <AntDesign size={37} name='caretright' color='#bd1818' />
               </TouchableOpacity>
-              <TouchableOpacity><Entypo size={27} name='share' color='rgb(117,117,117)' /></TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('Share')}>
+                <Entypo size={27} name='share' color='rgb(117,117,117)' />
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.bottom}>
@@ -76,7 +80,7 @@ export default class Movie extends Component {
 const styles = StyleSheet.create({
   container: {
     width: winWidth,
-    height: winHeight+Head.HEIGHT,
+    height: winHeight+APPBAR_HEIGHT,
   },
   top: {
     flex: winHeight/2,
@@ -154,7 +158,7 @@ const styles = StyleSheet.create({
     alignContent: 'space-between',
     position: 'absolute',
     alignSelf: 'center',
-    top: Head.HEIGHT,
+    top: APPBAR_HEIGHT,
     zIndex: 1,
   },
 })
