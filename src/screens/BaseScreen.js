@@ -5,9 +5,6 @@ import styles from '../styles';
 export default class BaseScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-        shouldHeaderAppear: true,
-    };
   }
 
   render() {

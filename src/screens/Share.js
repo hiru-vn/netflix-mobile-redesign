@@ -147,7 +147,6 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 20,
     },
     whiteText: {
         color: '#fff',

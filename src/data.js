@@ -125,3 +125,81 @@ export const Movies = [
         ]
     }
 ]
+
+export const reviews = [
+    {
+        id: 1,
+        name: 'Lisa',
+        avatar: require('./assets/images/avatar.png'),
+        time: '20 minutes',
+        rate: 8,
+        review: 'Fans of Rob Zombie’s delightfully wicked and sometimes shockingly brutal horror series have been counting down the minute until the extensive seemingly rather elongated marketing campaign for “3 From Hell” wraps and the title is added to the marquee.',
+        movie: {
+            name: 'THE NUTCRACKER AND THE FOUR REALMS',
+            poster: require('./assets/images/nutcracker.jpg'),
+        }
+    },
+    {
+        id: 2,
+        name: 'Martha',
+        avatar: require('./assets/images/avatar0.jpg'),
+        time: '20 minutes',
+        rate: 8,
+        review: 'Fans of Rob Zombie’s delightfully wicked and sometimes shockingly brutal horror series have been counting down the minute until the extensive seemingly rather elongated marketing campaign for “3 From Hell” wraps and the title is added to the marquee.',
+        movie: {
+            name: 'SPIDER MAN',
+            poster: require('./assets/images/spiderman.jpg'),
+        }
+    },
+    {
+        id: 3,
+        name: 'Jean',
+        avatar: require('./assets/images/avatar1.jpg'),
+        time: '20 minutes',
+        rate: 8,
+        review: 'Fans of Rob Zombie’s delightfully wicked and sometimes shockingly brutal horror series have been counting down the minute until the extensive seemingly rather elongated marketing campaign for “3 From Hell” wraps and the title is added to the marquee.',
+        movie: {
+            name: 'AVENGERS: ENDGAME',
+            poster: require('./assets/images/endgame.jpg'),
+        }
+    },
+    {
+        id: 4,
+        name: 'Bethany',
+        avatar: require('./assets/images/avatar2.jpg'),
+        time: '20 minutes',
+        rate: 8,
+        review: 'Fans of Rob Zombie’s delightfully wicked and sometimes shockingly brutal horror series have been counting down the minute until the extensive seemingly rather elongated marketing campaign for “3 From Hell” wraps and the title is added to the marquee.',
+        movie: {
+            name: 'TOY STORY',
+            poster: require('./assets/images/toystory.jpg'),
+        }
+    }
+]
+
+export const news = [
+    {
+        id: 1,
+        title: 'All Clara wants  is a key - a one-of-a-kind key...',
+        src: 'BBC News',
+        poster: require('./assets/images/endgame.jpg'),
+    },
+    {
+        id: 2,
+        title: 'All Clara wants  is a key - a one-of-a-kind key...',
+        src: 'CNN',
+        poster: require('./assets/images/nutcracker.jpg'),
+    },
+    {
+        id: 3,
+        title: 'All Clara wants  is a key - a one-of-a-kind key...',
+        src: 'CNN',
+        poster: require('./assets/images/spiderman.jpg'),
+    },
+    {
+        id: 4,
+        title: 'All Clara wants  is a key - a one-of-a-kind key...',
+        src: 'Netflix',
+        poster: require('./assets/images/toystory.jpg'),
+    }
+]

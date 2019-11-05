@@ -19,7 +19,8 @@ const { width: winWidth, height: winHeight } = Dimensions.get("window");
 const listButton = [
     { id: 0, text: "CATEGORY" },
     { id: 1, text: "HISTORY" },
-    { id: 2, text: "REVIEWS" }
+    { id: 2, text: "REVIEWS" },
+    { id: 3, text: "NEWS" },
 ];
 
 export default class Home extends Component {
@@ -31,7 +32,7 @@ export default class Home extends Component {
         this._carousel = {};
     }
     static navigationOptions = {
-        header: <Header/>,
+        header: null,
       };
     handleSnapToItem = index => {
         //go to
@@ -50,6 +51,8 @@ export default class Home extends Component {
         );
     };
     navSection = (item) => {
+        if (item.id == 3) this.props.navigation.navigate('News', { 'item': item })
+        if (item.id == 2) this.props.navigation.navigate('Posts', { 'item': item })
         if (item.id == 1) this.props.navigation.navigate('History', { 'item': item })
     }
     _renderButton = item => {
@@ -70,6 +73,7 @@ export default class Home extends Component {
     render() {
         return (
             <ScrollView style={styles.homeContainer}>
+                <Header/>
                 <View style={styles.recommedList}>
                     <Carousel
                         ref={c => {

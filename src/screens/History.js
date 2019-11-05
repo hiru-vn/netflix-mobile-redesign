@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 import Header from '../components/Header';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign } from '@expo/vector-icons';
 
@@ -21,7 +21,7 @@ export default class History extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Header goBack={this.props.navigation.goBack} shouldGoBack={true} />
         <View style={styles.historyContainer}>
           <LinearGradient
@@ -87,7 +87,10 @@ export default class History extends Component {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
+        <View style={styles.footer}>
+
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -95,8 +98,6 @@ export default class History extends Component {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: '100%',
-    alignItems: 'center',
   },
   body: {
     width: '100%',
@@ -105,10 +106,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     flexDirection: 'row',
   },
+  footer: {
+    height: winHeight/10,
+    width: '100%',
+  },
   historyContainer: {
     marginTop: 20,
     width: '100%',
     height: '18%',
+    alignItems: 'center',
     backgroundColor: '#BD1818',
   },
   linear: {

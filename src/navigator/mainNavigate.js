@@ -4,9 +4,11 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Home from '../screens/Home';
 import Movie from '../screens/Movie';
 import BaseScreen from '../screens/BaseScreen';
-import Header from '../components/Header';
 import History from '../screens/History';
 import Share from '../screens/Share';
+import Explore from '../screens/Explore';
+import News from '../screens/News';
+import Posts from '../screens/Posts';
 
 const RootStack = createStackNavigator({
     Home: {
@@ -23,6 +25,12 @@ const RootStack = createStackNavigator({
     },
     Share: {
         screen: Share,
+    },
+    News: {
+        screen: News,
+    },
+    Posts: {
+        screen: Posts,
     },
 },
     {

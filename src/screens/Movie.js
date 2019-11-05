@@ -20,10 +20,10 @@ export default class Movie extends Component {
         <View style={styles.container}>
           <View style={styles.Header}>
             <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
-              <AntDesign size={33} color='black' name='arrowleft' />
+              <AntDesign size={25} color='black' name='arrowleft' />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => this.setState({like: !this.state.like})}>
-              <AntDesign size={27} color={this.state.like?'#bd1818':'black'} name='heart' />
+              <AntDesign size={23} color={this.state.like?'#bd1818':'black'} name='heart' />
             </TouchableOpacity>
           </View>
           <View style={styles.imgContainer}>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     top: '-9%',
     alignSelf: 'center',
-    borderRadius: 1000,
+    borderRadius: winHeight/200*62,
     alignItems: 'center',
   },
   img: {
