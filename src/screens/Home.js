@@ -37,6 +37,9 @@ export default class Home extends Component {
     handleSnapToItem = index => {
         //go to
     };
+    openSearch = () => {
+        this.props.navigation.navigate('Search')
+    }
     _renderItem = ({ item, index }) => {
         return (
             <View style={styles.ThumbnailBackgroundView}>
@@ -73,7 +76,7 @@ export default class Home extends Component {
     render() {
         return (
             <ScrollView style={styles.homeContainer}>
-                <Header/>
+                <Header openDrawer={this.props.navigation.openDrawer} openSearch={this.openSearch}/>
                 <View style={styles.recommedList}>
                     <Carousel
                         ref={c => {

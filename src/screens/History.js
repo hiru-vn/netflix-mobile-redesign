@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   historyContainer: {
     marginTop: 20,
     width: '100%',
-    height: '18%',
+    height: '20%',
     alignItems: 'center',
     backgroundColor: '#BD1818',
   },

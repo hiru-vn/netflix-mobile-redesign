@@ -203,3 +203,41 @@ export const news = [
         poster: require('./assets/images/toystory.jpg'),
     }
 ]
+
+export const category = [
+    {
+        id: 1,
+        name: 'Avalable for Download',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 2,
+        name: 'Netflix Originals',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 3,
+        name: 'Action & Adventure',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 4,
+        name: 'Anime',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 5,
+        name: 'Children & Family',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 6,
+        name: 'Comedies',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 7,
+        name: 'Dramas',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+]
