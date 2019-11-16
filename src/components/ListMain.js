@@ -39,16 +39,14 @@ export default class ListMain extends Component {
 
 const styles = StyleSheet.create({
     container:{
-        marginLeft: 10,
-        marginTop: 20,
     },
     imgListItem: {
-        height: 180,
-        width: 130,
+        height: 105*1.41,
+        width: 105,
         marginLeft: 15,
-        borderRadius: 15,
         resizeMode: "cover",
         marginVertical: 10,
+        borderRadius: 3,
     },
     titleContainer: {
         flexDirection: 'row',

@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, Image ,Dimensions, CheckBox,TouchableOpacity} f
 import {Entypo} from '@expo/vector-icons'
 import { TextInput } from 'react-native-gesture-handler';
 import { LinearGradient } from "expo-linear-gradient";
+import APPBAR_HEIGHT from '../constant/APPBAR_HEIGHT';
+import {AntDesign} from '@expo/vector-icons'
 
 const { width: winWidth, height: winHeight } = Dimensions.get("window");
 
@@ -12,7 +14,9 @@ export default class Share extends Component {
     this.state = {
     };
   }
-
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     return (
       <View style={styles.container}>
@@ -59,6 +63,19 @@ export default class Share extends Component {
                 </LinearGradient>
             </TouchableOpacity>
         </View>
+        <View style={styles.bottom}>
+            <TouchableOpacity style={styles.back} onPress={() => { this.props.navigation.goBack() }}>
+                <View style={styles.row}>
+                    <AntDesign size={25} color='#f0f1f1' name='left' />
+                    <Text style={{ color: '#f0f1f1' }}>Back</Text>
+                </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.back} onPress={() => { this.props.navigation.navigate('Home') }}>
+                <View style={styles.row}>
+                    <Text style={{ color: '#f0f1f1' }}>Home</Text>
+                </View>
+            </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -69,15 +86,18 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         alignItems: 'center',
+        backgroundColor: '#181818',
+        paddingTop: APPBAR_HEIGHT,
     },
     titleContainer: {
-        height: '10%',
+        height: '6%',
         alignItems: 'center',
         justifyContent: 'center',
     },
     title: {
         fontSize: 18,
         fontWeight: '700',
+        color: '#f0f1f1',
     },
     avatarContainer: {
         height: '10%',
@@ -103,6 +123,7 @@ const styles = StyleSheet.create({
     point: {
         fontSize: 16,
         fontWeight: '600',
+        color: '#f0f1f1',
     },
     inputContainer: {
         height: '45%',
@@ -119,6 +140,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         paddingHorizontal: 20,
         fontSize: 14,
+        color: '#f0f1f1',
     },
     checkContainer: {
         height: '7%',
@@ -130,10 +152,12 @@ const styles = StyleSheet.create({
     checkContent: {
         fontSize: 16,
         fontWeight: '600',
+        color: '#f0f1f1',
     },
     check: {
-        borderRadius: 10,
+        borderRadius: 3,
         marginRight: 10,
+        borderColor: '#f0f1f1',
     },
     shareContainer: {
         height: '15%',
@@ -154,4 +178,17 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "700",
     },
+    row: {
+        flexDirection: 'row',
+        alignItems: "center",
+    },
+    back: {
+        marginLeft: '2%',
+        alignSelf: 'flex-start',
+    },
+    bottom: {
+        flexDirection: 'row',
+        width: '90%',
+        justifyContent: 'space-between',
+    }
 })

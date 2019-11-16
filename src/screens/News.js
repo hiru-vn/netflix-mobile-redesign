@@ -22,7 +22,7 @@ export default class News extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Header goBack={this.props.navigation.goBack} shouldGoBack={true} />
+        <Header goBack={this.props.navigation.goBack} shouldGoBack={true} notSearch={true}/>
         {
           news.map(item => this._newRender(item))
         }
@@ -35,6 +35,7 @@ export default class News extends Component {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    backgroundColor: '#181818',
   },
   newContainer: {
     width: '100%',
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     height: winHeight / 3.8,
     resizeMode: 'cover',
     marginTop: winHeight / 50,
-    borderRadius: 10,
+    borderRadius: 3,
   },
   title: {
     fontWeight: '700',

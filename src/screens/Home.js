@@ -10,10 +10,11 @@ import {
     ScrollView
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
-import { MyList, Movies, Popular, Friends } from "../data";
+import { MyList, Movies, Popular, Friends, Recent } from "../data";
 import { LinearGradient } from "expo-linear-gradient";
 import ListMain from "../components/ListMain";
 import Header from "../components/Header";
+import Recently from "../components/Recently";
 
 const { width: winWidth, height: winHeight } = Dimensions.get("window");
 const listButton = [
@@ -57,6 +58,7 @@ export default class Home extends Component {
         if (item.id == 3) this.props.navigation.navigate('News', { 'item': item })
         if (item.id == 2) this.props.navigation.navigate('Posts', { 'item': item })
         if (item.id == 1) this.props.navigation.navigate('History', { 'item': item })
+        if (item.id == 0) this.props.navigation.navigate('Category', { 'item': item })
     }
     _renderButton = item => {
         return (
@@ -91,6 +93,7 @@ export default class Home extends Component {
                         firstItem={1}
                     />
                 </View>
+                <Recently list={Recent} title='Continue Watching'/>
                 <FlatList
                     showsHorizontalScrollIndicator={false}
                     horizontal={true}

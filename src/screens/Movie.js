@@ -10,20 +10,20 @@ export default class Movie extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      like:false,
+      like: false,
       item: this.props.navigation.getParam('item', null),
     };
   }
   render() {
     return (
-      <ScrollView style={{ height: winHeight+APPBAR_HEIGHT }}>
+      <ScrollView style={{ height: winHeight + APPBAR_HEIGHT }}>
         <View style={styles.container}>
           <View style={styles.Header}>
-            <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
-              <AntDesign size={25} color='black' name='arrowleft' />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.setState({like: !this.state.like})}>
-              <AntDesign size={23} color={this.state.like?'#bd1818':'black'} name='heart' />
+            <TouchableOpacity onPress={() => { this.props.navigation.goBack() }}>
+              <View style={styles.row}>
+                <AntDesign size={25} color='#f0f1f1' name='left' />
+                <Text style={{ color: '#f0f1f1' }}>Back</Text>
+              </View>
             </TouchableOpacity>
           </View>
           <View style={styles.imgContainer}>
@@ -80,27 +80,28 @@ export default class Movie extends Component {
 const styles = StyleSheet.create({
   container: {
     width: winWidth,
-    height: winHeight+APPBAR_HEIGHT,
+    height: winHeight + APPBAR_HEIGHT,
+    backgroundColor: '#181818',
   },
   top: {
-    flex: winHeight/2,
+    flex: winHeight / 2,
     width: winWidth,
     alignItems: "center",
     justifyContent: 'flex-end',
   },
   bottom: {
-    flex: winHeight/2,
+    flex: winHeight / 2,
     width: winWidth,
     alignItems: 'center',
   },
   imgContainer: {
-    height: winHeight/100*62,
+    height: winHeight / 100 * 62,
     width: '150%',
     position: 'absolute',
     resizeMode: 'cover',
     top: '-9%',
     alignSelf: 'center',
-    borderRadius: winHeight/200*62,
+    borderRadius: winHeight / 200 * 62,
     alignItems: 'center',
   },
   img: {
@@ -152,13 +153,16 @@ const styles = StyleSheet.create({
     alignContent: 'space-between',
   },
   Header: {
-    width: '88%',
+    width: '96%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignContent: 'space-between',
+    alignContent: 'center',
     position: 'absolute',
     alignSelf: 'center',
     top: APPBAR_HEIGHT,
     zIndex: 1,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: "center",
   },
 })

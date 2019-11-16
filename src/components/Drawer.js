@@ -35,10 +35,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: 20,
-        paddingTop: 10,
+        paddingTop: APPBAR_HEIGHT+10,
         alignItems: 'center',
         width: '100%',
-        marginTop: APPBAR_HEIGHT,
+        backgroundColor: '#1B1B1B',
     },
     avatar: {
         width: 80,

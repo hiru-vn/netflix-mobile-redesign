@@ -35,7 +35,7 @@ export default class Posts extends Component {
     render() {
         return (
             <ScrollView style={styles.container}>
-                <Header goBack={this.props.navigation.goBack} shouldGoBack={true} />
+                <Header goBack={this.props.navigation.goBack} shouldGoBack={true} notSearch={true}/>
                 {
                     reviews.map(item => this._reviewRender(item))
                 }
@@ -48,6 +48,7 @@ export default class Posts extends Component {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
+        backgroundColor: '#181818',
     },
     footer: {
         width: '100%',
@@ -88,22 +89,25 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     title: {
-
+        color: '#f0f1f1',
     },
     movie: {
         fontWeight: '700',
+        color: '#f0f1f1',
     },
     time: {
         fontSize: 11,
+        color: '#f0f1f1',
     },
     reviewConent: {
         marginTop: winHeight/50,
+        color: '#f0f1f1',
     },
     poster: {
         width: '100%',
         height: winHeight / 5,
         resizeMode: 'cover',
         marginTop: winHeight/50,
-        borderRadius: 10,
+        borderRadius: 3,
     }
 })

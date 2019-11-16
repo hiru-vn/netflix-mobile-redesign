@@ -54,6 +54,24 @@ export const Friends = [
         src: require('./assets/images/erased.jpg')
     },
 ]
+export const Recent = [
+    {
+        id: 1,
+        src: require('./assets/images/recent0.jpg')
+    },
+    {
+        id: 2,
+        src: require('./assets/images/recent1.jpg')
+    },
+    {
+        id: 3,
+        src: require('./assets/images/recent2.jpg')
+    },
+    {
+        id: 4,
+        src: require('./assets/images/recent3.jpg')
+    },
+]
 export const Movies = [
     {
         id: 1,
@@ -238,6 +256,39 @@ export const category = [
     {
         id: 7,
         name: 'Dramas',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+]
+
+export const tvShowCategory = [
+    {
+        id:1,
+        name: 'horror',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id:2,
+        name: 'horror',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id:3,
+        name: 'horror',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id:4,
+        name: 'horror',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id:5,
+        name: 'horror',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id:6,
+        name: 'horror',
         img: require('./assets/images/avengers_download.jpg'),
     },
 ]

@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
   container: {
     width: winWidth,
     alignItems: 'center',
+    backgroundColor: '#181818',
   },
   nav: {
     width: winWidth,
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
   navButton: {
     width: winWidth / 2.5,
     height: winWidth / 7,
-    borderRadius: 10,
+    borderRadius: 3,
     justifyContent: 'center',
     alignItems: 'center',
     margin: 2,

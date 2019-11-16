@@ -1,14 +1,18 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet ,Dimensions} from 'react-native';
+
+const { width: winWidth, height: winHeight } = Dimensions.get("window");
 
 export default styles = StyleSheet.create({
   baseScreen: {
     width: '100%',
     height: '100%',
+    backgroundColor: '#181818',
   },
   homeContainer: {
     flex: 1,
     height: '100%',
     width: '100%',
+    backgroundColor: '#181818',
   },
   recommedList: {
     height: 200,
@@ -27,12 +31,12 @@ export default styles = StyleSheet.create({
     top: 25,
     width: 300,
     height: 170,
-    borderRadius: 20,
+    borderRadius: 3,
   },
   buttonMain: {
-    width: 150,
-    height: 60,
-    borderRadius: 15,
+    width: winWidth/3,
+    height: winWidth/3/2.5,
+    borderRadius: 3,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 20,
@@ -42,12 +46,12 @@ export default styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
-    borderRadius: 15,
+    borderRadius: 3,
   },
   whiteText: {
     color: '#fff',
-    letterSpacing: 1.8,
-    fontSize : 15,
+    letterSpacing: 1.5,
+    fontSize : 14,
     fontWeight : "700",
   },
 });

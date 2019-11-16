@@ -12,6 +12,8 @@ import Posts from '../screens/Posts';
 import DrawerSection from '../components/Drawer'
 import Search from '../screens/Search';
 import {horizontalTransitionConfig} from './transitions'
+import Category from '../screens/Category';
+import CategoryResult from '../screens/CategoryResult';
 
 const RootStack = createStackNavigator({
     Home: {
@@ -38,7 +40,13 @@ const RootStack = createStackNavigator({
     Search: {
         screen: Search,
     },
-},
+    Category: {
+        screen: Category,
+    },
+    CategoryResult: {
+        screen: CategoryResult,
+    },
+},  
     {
         initialRouteName: 'Home',
         horizontalTransitionConfig,

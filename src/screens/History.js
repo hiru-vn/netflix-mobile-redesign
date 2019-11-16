@@ -22,7 +22,7 @@ export default class History extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Header goBack={this.props.navigation.goBack} shouldGoBack={true} />
+        <Header goBack={this.props.navigation.goBack} shouldGoBack={true} notSearch={true}/>
         <View style={styles.historyContainer}>
           <LinearGradient
             colors={["#ad1616", "#c11616", "#ad1616"]}
@@ -98,6 +98,7 @@ export default class History extends Component {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    backgroundColor: '#181818',
   },
   body: {
     width: '100%',
