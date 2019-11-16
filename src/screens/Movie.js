@@ -31,7 +31,7 @@ export default class Movie extends Component {
           </View>
           <View style={styles.top}>
             <View style={styles.topBottom}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => {alert('added to Mylist')}}>
                 <Entypo size={27} name='plus' color='rgb(117,117,117)' />
               </TouchableOpacity>
               <TouchableOpacity style={styles.playButton}>
@@ -50,7 +50,7 @@ export default class Movie extends Component {
               <Entypo size={27} color='#bd1818' name='star' />
               <Entypo size={27} color='#bd1818' name='star' />
               <Entypo size={27} color='#bd1818' name='star' />
-              <Entypo size={27} color='black' name='star' />
+              <Entypo size={27} color='#f0f1f1' name='star' />
             </View>
             <View style={[customStyles.row, customStyles.spaceAround, customStyles.fullWidth]}>
               <View style={[customStyles.alignCenter, customStyles.ml10]}>
@@ -114,11 +114,10 @@ const styles = StyleSheet.create({
   playButton: {
     height: 75,
     width: 75,
-    backgroundColor: '#fff',
+    backgroundColor: '#f0f1f1',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 1000,
-    borderWidth: 1,
   },
   topBottom: {
     alignSelf: 'center',
@@ -131,7 +130,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    color: '#000',
+    color: '#f0f1f1',
     width: '60%',
     fontWeight: '700',
     letterSpacing: 1.4,

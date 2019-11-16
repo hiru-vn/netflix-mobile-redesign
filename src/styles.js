@@ -88,6 +88,7 @@ export const customStyles = StyleSheet.create({
   },
   bigText: {
     fontSize: 20,
+    color: '#f0f1f1',
   },
   bold: {
     fontWeight: '700',

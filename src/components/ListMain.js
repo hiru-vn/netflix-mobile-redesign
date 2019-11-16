@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     container:{
     },
     imgListItem: {
-        height: 105*1.41,
-        width: 105,
+        height: 110*1.41,
+        width: 110,
         marginLeft: 15,
         resizeMode: "cover",
         marginVertical: 10,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     title: {
-        color: 'rgb(117,117,117)',
+        color: '#f0f1f1',
         marginLeft: 10,
         fontSize: 16,
         fontWeight: '700',

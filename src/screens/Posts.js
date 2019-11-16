@@ -24,7 +24,7 @@ export default class Posts extends Component {
                         <Entypo size={20} color='#bd1818' name='star' />
                         <Entypo size={20} color='#bd1818' name='star' />
                         <Entypo size={20} color='#bd1818' name='star' />
-                        <Entypo size={20} color='black' name='star' />
+                        <Entypo size={20} color='#f0f1f1' name='star' />
                     </View>
                 </View>
             </View>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     },
     poster: {
         width: '100%',
-        height: winHeight / 5,
+        height: winHeight / 4,
         resizeMode: 'cover',
         marginTop: winHeight/50,
         borderRadius: 3,

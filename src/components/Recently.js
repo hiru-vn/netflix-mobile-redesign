@@ -14,7 +14,7 @@ export default class Recently extends Component {
         return (
             <TouchableOpacity style={{marginLeft: 15}}>
                 <Image style={styles.imgListItem} source={item.item.src} />
-                <View style={{flexDirection:'row',width:253.8, height:1,}}>
+                <View style={{flexDirection:'row',width:130*1.8, height:1,}}>
                     <View style={{width:"70%", height:1, backgroundColor:'#DB0000'}}></View>
                     <View style={{width:"30%", height:1, backgroundColor:'#f1f1f1'}}></View>
                 </View>
@@ -49,10 +49,12 @@ const styles = StyleSheet.create({
     container:{
     },
     imgListItem: {
-        height: 100*1.41,
-        width: 100*1.41*1.8,
+        height: 130,
+        width: 130*1.8,
         resizeMode: "cover",
         marginTop: 10,
+        borderTopLeftRadius: 3,
+        borderBottomRightRadius: 3,
     },
     titleContainer: {
         flexDirection: 'row',
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     title: {
-        color: 'rgb(117,117,117)',
+        color: '#f0f1f1',
         marginLeft: 10,
         fontSize: 16,
         fontWeight: '700',

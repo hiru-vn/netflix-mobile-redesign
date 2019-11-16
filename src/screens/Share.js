@@ -17,6 +17,10 @@ export default class Share extends Component {
   static navigationOptions = {
     header: null,
   };
+  share = () => {
+      alert('your post has been shared.')
+      this.props.navigation.goBack()
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -31,7 +35,7 @@ export default class Share extends Component {
             <Entypo size={25} color='#bd1818' name='star' />
             <Entypo size={25} color='#bd1818' name='star' />
             <Entypo size={25} color='#bd1818' name='star' />
-            <Entypo size={25} color='black' name='star' />
+            <Entypo size={25} color='#f0f1f1' name='star' />
         </View>
         <View style={styles.pointContainer}>
             <Text style={styles.point}>8.0</Text>
@@ -52,7 +56,7 @@ export default class Share extends Component {
             <Text style={styles.checkContent} multiline={true}>Share this review with friends</Text>
         </View>
         <View style={styles.shareContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={this.share}>
                 <LinearGradient
                     colors={["#d45253", "#9e1f28"]}
                     style={styles.share}
