@@ -21,7 +21,7 @@ export default class Drawer extends React.Component {
                     </TouchableOpacity>
                     <View>
                         <Text style={styles.name}>Kiona Anh</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('ChangeAccount')}}>
                             <View style={{ flexDirection: 'row' }}>
                                 <MaterialCommunityIcons size={25} color="#bd0000" name='account-switch' />
                                 <Text style={styles.redText}>Switch</Text>

@@ -4,6 +4,7 @@ import { Entypo, AntDesign } from '@expo/vector-icons'
 import { customStyles } from '../styles';
 import ListSecondary from '../components/ListSecondary';
 import APPBAR_HEIGHT from '../constant/APPBAR_HEIGHT';
+import { Movies } from '../data';
 
 const { width: winWidth, height: winHeight } = Dimensions.get("window");
 export default class Movie extends Component {
@@ -11,7 +12,7 @@ export default class Movie extends Component {
     super(props)
     this.state = {
       like: false,
-      item: this.props.navigation.getParam('item', null),
+      item: this.props.navigation.getParam('item', Movies[0]),
     };
   }
   render() {

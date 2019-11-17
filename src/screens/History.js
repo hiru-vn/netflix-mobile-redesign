@@ -45,7 +45,7 @@ export default class History extends Component {
             <View style={styles.circle} backgroundColor='rgb(117,117,117)' />
           </View>
           <View style={styles.right}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Movie')}>
               <View style={styles.movieContainer}>
                 <View style={styles.titleContainer}>
                   <Text style={styles.content}>Episode 5 | 52 mins</Text>
@@ -55,7 +55,7 @@ export default class History extends Component {
                 <AntDesign size={20} color='rgb(117,117,117)' name='right' />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Movie')}>
               <View style={styles.movieContainer}>
                 <View style={styles.titleContainer}>
                   <Text style={styles.content}>Episode 12 | 47 mins</Text>
@@ -65,7 +65,7 @@ export default class History extends Component {
                 <AntDesign size={20} color='rgb(117,117,117)' name='right' />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Movie')}>
               <View style={styles.movieContainer}>
                 <View style={styles.titleContainer}>
                   <Text style={styles.content}>108 mins</Text>
@@ -75,7 +75,7 @@ export default class History extends Component {
                 <AntDesign size={20} color='rgb(117,117,117)' name='right' />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Movie')}>
               <View style={styles.movieContainer}>
                 <View style={styles.titleContainer}>
                   <Text style={styles.content}>124 mins</Text>
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#181818',
   },
   body: {
-    width: '100%',
+    width: winWidth,
     height: '80%',
     paddingTop: '4%',
     paddingHorizontal: 15,
@@ -109,11 +109,11 @@ const styles = StyleSheet.create({
   },
   footer: {
     height: winHeight/10,
-    width: '100%',
+    width: winWidth,
   },
   historyContainer: {
     marginTop: 20,
-    width: '100%',
+    width: winWidth,
     height: '20%',
     alignItems: 'center',
     backgroundColor: '#BD1818',
@@ -157,29 +157,30 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   movieContainer: {
-    width: '100%',
+    width: winWidth-50,
     height: 105,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 15,
+    paddingHorizontal: 10,
+    justifyContent: 'space-between',
   },
   titleContainer: {
     width: winWidth - 200,
   },
   img: {
-    width: 100,
-    height: 65,
+    width: winWidth/4.5,
+    height: winWidth/4.5/100*65,
     resizeMode: 'cover',
-    marginRight: 5,
+    marginLeft: 5,
   },
   title: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: '700',
     color: 'rgb(141,141,141)',
     letterSpacing: 0.3,
   },
   content: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '500',
     color: 'rgb(117,117,117)',
     letterSpacing: 1,

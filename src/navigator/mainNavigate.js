@@ -14,6 +14,8 @@ import Search from '../screens/Search';
 import {horizontalTransitionConfig} from './transitions'
 import Category from '../screens/Category';
 import CategoryResult from '../screens/CategoryResult';
+import SearchResult from '../screens/SearchResult';
+import ChangeAccount from '../screens/ChangeAccount';
 
 const RootStack = createStackNavigator({
     Home: {
@@ -46,9 +48,15 @@ const RootStack = createStackNavigator({
     CategoryResult: {
         screen: CategoryResult,
     },
+    SearchResult: {
+        screen: SearchResult,
+    },
+    ChangeAccount: {
+        screen: ChangeAccount,
+    }
 },  
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'ChangeAccount',
         horizontalTransitionConfig,
     }
 );

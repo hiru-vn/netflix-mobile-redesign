@@ -52,7 +52,7 @@ export default class Search extends Component {
                 <View style={styles.hashtagContainer}>
                     {
                         category.map(item =>
-                            (<TouchableOpacity key={item.id}>
+                            (<TouchableOpacity key={item.id} onPress={() => {this.props.navigation.navigate('SearchResult')}}>
                                 <Text style={styles.hashtag}>{item.name}</Text>
                             </TouchableOpacity>))
                     }
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         backgroundColor: '#d45253',
         color: '#f0f1f1',
-        borderRadius: 3,
+        borderRadius: 10,
         alignSelf: 'center',
     },
 })

@@ -292,3 +292,54 @@ export const tvShowCategory = [
         img: require('./assets/images/avengers_download.jpg'),
     },
 ]
+
+export const searchResult = [
+    {
+        id: 1,
+        name: 'Seven Deadly Sins',
+        img: require('./assets/images/search0.jpg')
+    },
+    {
+        id: 2,
+        name: 'Kengan Ashura',
+        img: require('./assets/images/search1.jpg')
+    },
+    {
+        id: 3,
+        name: 'Waka sin Neru',
+        img: require('./assets/images/search2.jpg')
+    },
+    {
+        id: 4,
+        name: 'Overlord',
+        img: require('./assets/images/search3.jpg')
+    },
+]
+
+export const accounts = [
+    {
+        id: 1,
+        name: 'Alisa',
+        img: require('./assets/images/avatar0.jpg'),
+    },
+    {
+        id: 2,
+        name: 'Alisa',
+        img: require('./assets/images/avatar1.jpg'),
+    },
+    {
+        id: 3,
+        name: 'Alisa',
+        img: require('./assets/images/avatar2.jpg'),
+    },
+    {
+        id: 4,
+        name: 'Alisa',
+        img: require('./assets/images/avatar1.jpg'),
+    },
+    {
+        id: 5,
+        name: 'Alisa',
+        img: require('./assets/images/avatar0.jpg'),
+    },
+]
