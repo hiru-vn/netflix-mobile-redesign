@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     imgListItem: {
-        height: 120,
+        height: 170/1.8,
         width: 170,
         marginLeft: 15,
         borderRadius: 3,

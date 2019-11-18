@@ -25,6 +25,10 @@ export const MyList = [
         id: 3,
         src: require('./assets/images/erased.jpg')
     },
+    {
+        id: 4,
+        src: require('./assets/images/plastic_memories.png')
+    },
 ]
 export const Popular = [
     {
@@ -39,6 +43,10 @@ export const Popular = [
         id: 3,
         src: require('./assets/images/seven_deadly_sins.jpg')
     },
+    {
+        id: 4,
+        src: require('./assets/images/daredevil.jpg')
+    },
 ]
 export const Friends = [
     {
@@ -52,6 +60,10 @@ export const Friends = [
     {
         id: 3,
         src: require('./assets/images/erased.jpg')
+    },
+    {
+        id: 4,
+        src: require('./assets/images/plastic_memories.png')
     },
 ]
 export const Recent = [

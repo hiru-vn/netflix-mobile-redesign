@@ -81,13 +81,13 @@ export const customStyles = StyleSheet.create({
     flexDirection: 'row',
   },
   mediumText: {
-    fontSize: 18,
-  },
-  smallText: {
     fontSize: 16,
   },
+  smallText: {
+    fontSize: 14,
+  },
   bigText: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#f0f1f1',
   },
   bold: {
@@ -108,7 +108,7 @@ export const customStyles = StyleSheet.create({
   ml20: {
     marginLeft: 20,
   },
-  mr20:{
+  mr20: {
     marginRight:20,
   },
 })

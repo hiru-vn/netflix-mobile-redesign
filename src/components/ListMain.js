@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 5,
-        paddingRight: 30,
+        paddingRight: 20,
         marginTop: 10,
     },
     title: {

@@ -17,7 +17,7 @@ export default class Movie extends Component {
   }
   render() {
     return (
-      <ScrollView style={{ height: winHeight + APPBAR_HEIGHT }}>
+      <ScrollView style={{ width: winWidth }}>
         <View style={styles.container}>
           <View style={styles.Header}>
             <TouchableOpacity onPress={() => { this.props.navigation.goBack() }}>
@@ -32,7 +32,7 @@ export default class Movie extends Component {
           </View>
           <View style={styles.top}>
             <View style={styles.topBottom}>
-              <TouchableOpacity onPress={() => {alert('added to Mylist')}}>
+              <TouchableOpacity onPress={() => { alert('added to Mylist') }}>
                 <Entypo size={27} name='plus' color='rgb(117,117,117)' />
               </TouchableOpacity>
               <TouchableOpacity style={styles.playButton}>
@@ -69,8 +69,25 @@ export default class Movie extends Component {
             </View>
             <Text style={[styles.short, customStyles.smallText, customStyles.bold, customStyles.gray]}>
               All Clara wants is a key - a one-of-a-kind key that will unlock a box that holds a pricelessgift from her late mother. A golden thread, presented o ther at godfather Drosslemeyer’s anual holiday party, leads her to the coverted key-which promptly disappears into astrange and mys terious parallel world...
-          </Text>
+            </Text>
             <ListSecondary list={this.state.item.screenShots} title='Screenshots' />
+            <View style={styles.friends}>
+              <Text style={[customStyles.mediumText, customStyles.bold, customStyles.gray]}>Your friend like this movie</Text>
+              <View style={styles.listAvatar}>
+                <View style={styles.person}>
+                  <Image style={styles.avatar} source={require('../assets/images/avatar0.jpg')} />
+                  <Text>Alisa</Text>
+                </View>
+                <View style={styles.person}>
+                  <Image style={styles.avatar} source={require('../assets/images/avatar1.jpg')} />
+                  <Text>Alisa</Text>
+                </View>
+                <View style={styles.person}>
+                  <Image style={styles.avatar} source={require('../assets/images/avatar2.jpg')} />
+                  <Text>Alisa</Text>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -81,36 +98,36 @@ export default class Movie extends Component {
 const styles = StyleSheet.create({
   container: {
     width: winWidth,
-    height: winHeight + APPBAR_HEIGHT,
     backgroundColor: '#181818',
+    minHeight: winHeight,
   },
   top: {
-    flex: winHeight / 2,
+    height: winHeight / 2 + 20,
     width: winWidth,
     alignItems: "center",
     justifyContent: 'flex-end',
   },
   bottom: {
-    flex: winHeight / 2,
     width: winWidth,
     alignItems: 'center',
   },
   imgContainer: {
     height: winHeight / 100 * 62,
-    width: '150%',
+    width: winWidth * 1.5,
     position: 'absolute',
     resizeMode: 'cover',
-    top: '-9%',
+    top: '-5%',
     alignSelf: 'center',
-    borderRadius: winHeight / 200 * 62,
     alignItems: 'center',
   },
   img: {
     height: '90%',
     width: '90%',
-    borderRadius: 1000,
     position: 'absolute',
     top: 0,
+    borderBottomLeftRadius: winHeight / 200 * 63,
+    borderBottomRightRadius: winHeight / 200 * 63,
+    borderRadius: winHeight / 200 * 63,
   },
   playButton: {
     height: 75,
@@ -164,5 +181,25 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: "center",
+  },
+  friends: {
+    alignItems: 'center',
+    width: 100, 
+    height: 100,
+    backgroundColor: 'blue',
+  },
+  listAvatar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: winWidth,
+    backgroundColor: 'blue',
+  },
+  avatar: {
+    width: 75,
+    height: 75,
+    borderRadius: 80,
+  },
+  person: {
+    alignItems: 'center',
   },
 })

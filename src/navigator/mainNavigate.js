@@ -56,7 +56,7 @@ const RootStack = createStackNavigator({
     }
 },  
     {
-        initialRouteName: 'ChangeAccount',
+        initialRouteName: 'Movie',
         horizontalTransitionConfig,
     }
 );

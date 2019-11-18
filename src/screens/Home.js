@@ -125,7 +125,7 @@ const _styles = StyleSheet.create({
     },
     title: {
         color: '#f0f1f1',
-        marginLeft: 10,
+        marginLeft: 5,
         fontSize: 16,
         fontWeight: '700',
     },
