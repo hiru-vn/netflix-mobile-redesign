@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 5,
-        marginRight: 20,
+        marginRight: 10,
         marginTop: 10,
     },
     title: {

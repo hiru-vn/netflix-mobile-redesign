@@ -1,14 +1,17 @@
 export const HomeRecommed = [
     {
         id: 1,
+        name: 'Then Nutcracker and The four Realms',
         src: require('./assets/images/spiderman.jpg')
     },
     {
         id: 2,
+        name: 'Spiderman: Home coming',
         src: require('./assets/images/nutcracker.jpg')
     },
     {
         id: 3,
+        name: 'Toy Story 3: Grow up',
         src: require('./assets/images/toystory_0.jpg')
     },
 ]
@@ -276,32 +279,32 @@ export const tvShowCategory = [
     {
         id:1,
         name: 'horror',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/dunkirk.jpg'),
     },
     {
         id:2,
         name: 'horror',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/dunkirk.jpg'),
     },
     {
         id:3,
         name: 'horror',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/dunkirk.jpg'),
     },
     {
         id:4,
         name: 'horror',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/dunkirk.jpg'),
     },
     {
         id:5,
         name: 'horror',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/dunkirk.jpg'),
     },
     {
         id:6,
         name: 'horror',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/dunkirk.jpg'),
     },
 ]
 

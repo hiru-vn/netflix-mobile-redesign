@@ -16,7 +16,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import ListMain from "../components/ListMain";
 import Header from "../components/Header";
 import Recently from "../components/Recently";
-import { AntDesign } from '@expo/vector-icons'
+import { Entypo } from '@expo/vector-icons'
 
 const { width: winWidth, height: winHeight } = Dimensions.get("window");
 const listButton = [
@@ -52,6 +52,7 @@ export default class Home extends Component {
                     }}
                 >
                     <Image style={styles.CurrentImage} source={item.poster} />
+                    <Text style={_styles.tint}>{item.name.toLowerCase()}</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -128,5 +129,17 @@ const _styles = StyleSheet.create({
         marginLeft: 5,
         fontSize: 16,
         fontWeight: '700',
+    },
+    tint: {
+        alignSelf: 'center',
+        textAlign: 'center',
+        width: 300,
+        color: '#f0f1f1',
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        padding: 3,
+        borderBottomLeftRadius: 3,
+        borderBottomRightRadius: 3,
+        fontWeight: '400',
+        letterSpacing: 0.3,
     },
 })
