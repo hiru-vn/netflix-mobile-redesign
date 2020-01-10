@@ -22,7 +22,7 @@ export default class TabShow extends Component {
             tvShowCategory.map(item => (
               <View style={styles.category} key={item.id}>
                 <TouchableOpacity onPress={() => this.props.screenProps.nav('CategoryResult')}>
-                    <Image source={item.img} style={styles.categoryImg}/>
+                    <Image source={item.img2} style={styles.categoryImg}/>
                 </TouchableOpacity>
                 <Text style={styles.name}>{item.name}</Text>
               </View>

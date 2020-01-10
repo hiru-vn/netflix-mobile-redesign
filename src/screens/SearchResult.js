@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
     },
     itemContainer: {
-        height: winWidth/4.5,
+        height: winWidth*9/10/3.236,
         marginVertical: winWidth/20,
     },
     row: {

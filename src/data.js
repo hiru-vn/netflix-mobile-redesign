@@ -246,7 +246,7 @@ export const category = [
     {
         id: 2,
         name: 'Netflix Originals',
-        img: require('./assets/images/avengers_download.jpg'),
+        img: require('./assets/images/endgame.jpg'),
     },
     {
         id: 3,
@@ -260,16 +260,21 @@ export const category = [
     },
     {
         id: 5,
-        name: 'Children & Family',
+        name: 'Fiction',
         img: require('./assets/images/avengers_download.jpg'),
     },
     {
         id: 6,
-        name: 'Comedies',
+        name: 'Children & Family',
         img: require('./assets/images/avengers_download.jpg'),
     },
     {
         id: 7,
+        name: 'Comedies',
+        img: require('./assets/images/avengers_download.jpg'),
+    },
+    {
+        id: 8,
         name: 'Dramas',
         img: require('./assets/images/avengers_download.jpg'),
     },
@@ -280,31 +285,37 @@ export const tvShowCategory = [
         id:1,
         name: 'horror',
         img: require('./assets/images/dunkirk.jpg'),
+        img2: require('./assets/images/c0.jpg'),
     },
     {
         id:2,
-        name: 'horror',
-        img: require('./assets/images/dunkirk.jpg'),
+        name: 'drama',
+        img: require('./assets/images/oitnb.jpg'),
+        img2: require('./assets/images/c0.jpg'),
     },
     {
         id:3,
-        name: 'horror',
-        img: require('./assets/images/dunkirk.jpg'),
+        name: 'fiction',
+        img: require('./assets/images/endgame.jpg'),
+        img2: require('./assets/images/c0.jpg'),
     },
     {
         id:4,
-        name: 'horror',
-        img: require('./assets/images/dunkirk.jpg'),
+        name: 'comic',
+        img: require('./assets/images/avengers_download.jpg'),
+        img2: require('./assets/images/c1.jpg'),
     },
     {
         id:5,
-        name: 'horror',
-        img: require('./assets/images/dunkirk.jpg'),
+        name: 'trategy',
+        img: require('./assets/images/plastic_memories.png'),
+        img2: require('./assets/images/c1.jpg'),
     },
     {
         id:6,
         name: 'horror',
-        img: require('./assets/images/dunkirk.jpg'),
+        img: require('./assets/images/c1.jpg'),
+        img2: require('./assets/images/c1.jpg'),
     },
 ]
 
