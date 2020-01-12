@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AntDesign} from '@expo/vector-icons'
+import { AntDesign } from '@expo/vector-icons'
 import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 export default class ListSecondary extends Component {
@@ -12,7 +12,10 @@ export default class ListSecondary extends Component {
     }
     _renderList = (item) => {
         return (
-            <TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => {
+                    this.props.navigator.navigate('Movie')
+                }}>
                 <Image style={styles.imgListItem} source={item.item.src} />
             </TouchableOpacity>
         )
@@ -22,7 +25,7 @@ export default class ListSecondary extends Component {
             <View style={styles.container}>
                 <View style={styles.titleContainer}>
                     <Text style={styles.title}> {this.state.title} </Text>
-                    <TouchableOpacity><AntDesign size={27} color='rgb(117,117,117)' name='arrowright'/></TouchableOpacity>
+                    <TouchableOpacity><AntDesign size={27} color='rgb(117,117,117)' name='arrowright' /></TouchableOpacity>
                 </View>
                 <FlatList
                     showsHorizontalScrollIndicator={false}
@@ -38,11 +41,11 @@ export default class ListSecondary extends Component {
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         marginLeft: 10,
     },
     imgListItem: {
-        height: 170/1.8,
+        height: 170 / 1.8,
         width: 170,
         marginLeft: 15,
         borderRadius: 3,

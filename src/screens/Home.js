@@ -108,9 +108,9 @@ export default class Home extends Component {
                     keyExtractor={item => item.text}
                     renderItem={this._renderButton}
                 />
-                <ListMain list={MyList} title='My List' />
-                <ListMain list={Popular} title='Popular on Netflix' />
-                <ListMain list={Friends} title='Your friend also like' />
+                <ListMain list={MyList} navigator={this.props.navigation} title='My List' />
+                <ListMain list={Popular} navigator={this.props.navigation} title='Popular on Netflix' />
+                <ListMain list={Friends} navigator={this.props.navigation} title='Your friend also like' />
             </ScrollView>
         );
     }

@@ -54,11 +54,14 @@ export default class CategoryResult extends Component {
           {
             tvShowCategory.map(item => (
               <View style={styles.category} key={item.id}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    this.props.navigation.navigate('Movie')
+                  }}>
                   <Image source={item.img} style={styles.categoryImg} />
                 </TouchableOpacity>
                 <View style={styles.rate}>
-                  <Text style={{ color: '#f0f1f1', fontSize: 12 ,letterSpacing: 1}}>Rate: 4.2</Text>
+                  <Text style={{ color: '#f0f1f1', fontSize: 12, letterSpacing: 1 }}>Rate: 4.2</Text>
                 </View>
               </View>
             ))
@@ -129,5 +132,5 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     letterSpacing: 0.3,
   },
-  rate: {backgroundColor: '#000',padding: 5, borderBottomLeftRadius:3, borderBottomRightRadius: 3,}
+  rate: { backgroundColor: '#000', padding: 5, borderBottomLeftRadius: 3, borderBottomRightRadius: 3, }
 })

@@ -12,7 +12,7 @@ export default class Movie extends Component {
     super(props)
     this.state = {
       like: false,
-      item: this.props.navigation.getParam('item', Movies[0]),
+      item: this.props.navigation.getParam('item', Movies[1]),
     };
   }
   render() {
@@ -21,7 +21,7 @@ export default class Movie extends Component {
         <View style={styles.container}>
           <View style={styles.Header}>
             <TouchableOpacity onPress={() => { this.props.navigation.goBack() }}>
-              <View style={styles.row}>
+              <View style={styles.back}>
                 <AntDesign size={25} color='#f0f1f1' name='left' />
                 <Text style={{ color: '#f0f1f1' }}>Back</Text>
               </View>
@@ -70,7 +70,7 @@ export default class Movie extends Component {
             <Text style={[styles.short, customStyles.smallText, customStyles.bold, customStyles.gray]}>
               All Clara wants is a key - a one-of-a-kind key that will unlock a box that holds a pricelessgift from her late mother. A golden thread, presented o ther at godfather Drosslemeyer’s anual holiday party, leads her to the coverted key-which promptly disappears into astrange and mys terious parallel world...
             </Text>
-            <ListSecondary list={this.state.item.screenShots} title='Screenshots' />
+            <ListSecondary list={this.state.item.screenShots} navigator={this.props.navigation} title='Screenshots' />
             <View style={styles.friends}>
               <Text style={[customStyles.mediumText, customStyles.bold, customStyles.gray]}>Your friend like this movie</Text>
               <View style={styles.listAvatar}>
@@ -181,6 +181,11 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: "center",
+  },
+  back: {
+    flexDirection: 'row',
+    alignItems: "center",
+    marginTop: 15,
   },
   friends: {
     alignItems: 'center',
