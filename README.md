@@ -1,5 +1,5 @@
-# netflix-mobile-redesign
-react native version
+# Netflix Mobile Redesign
+for website version, see [netflix-web-redesign](https://github.com/loia5tqd001/Clone-Netflix-SE215) 
 
 <div>
 <table style="width:100%">
